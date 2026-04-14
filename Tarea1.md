@@ -59,3 +59,9 @@ Asimismo, habrían señalado un **riesgo crítico** de diseño: la vulnerabilida
 [Implementación / Despliegue]
       ↓
 [Mantenimiento]
+```
+---
+
+### **Conclusión Técnica**
+
+La tragedia del Therac-25 demuestra que la confianza ciega en el software es un error fatal. La seguridad nunca debe depender únicamente del código, especialmente cuando se elimina el respaldo físico. La lección es clara: un sistema no está terminado cuando funciona, sino cuando se ha probado su resistencia y errores humanos.
