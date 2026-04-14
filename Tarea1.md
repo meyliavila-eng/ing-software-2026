@@ -18,12 +18,9 @@ El fallo principal ocurrió en la fase de **Pruebas (Testing)** y también en la
 - Hubo mala gestión de versiones en el despliegue del sistema.
 - El sistema fue puesto en producción sin una validación completa de comportamiento.
 
-En resumen, el error pudo haberse detectado antes si se hubieran aplicado pruebas completas de integración y validación en un ambiente controlado antes de la liberación.
-
 
 ---
 ## 4. ¿Qué herramienta de IA podría haber detectado o prevenido este fallo?
-
 Claude (Anthropic): Gracias a su capacidad para el razonamiento complejo y la revisión de arquitecturas, Claude podría haber detectado la vulnerabilidad lógica al analizar cómo el código manejaba las interrupciones del usuario.
 
 
