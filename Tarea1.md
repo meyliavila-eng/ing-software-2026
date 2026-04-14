@@ -1,4 +1,4 @@
-# Tarea 1 – Proyecto de Software Fallido (Caso: Knight Capital)
+# Proyecto de Software Fallido (Caso: Knight Capital)
 
 ##  Proyecto de software fallido investigado
 Knight Capital fue una empresa financiera de Estados Unidos dedicada al trading electrónico en la bolsa de valores. En el año 2012, la empresa sufrió uno de los fallos de software más costosos en la historia financiera.
@@ -20,7 +20,7 @@ El fallo principal ocurrió en la fase de **Pruebas (Testing)** y también en la
 
 
 ---
-## 4. ¿Qué herramienta de IA podría haber detectado o prevenido este fallo?
+## ¿Qué herramienta de IA podría haber detectado o prevenido este fallo?
 Claude (Anthropic): Gracias a su capacidad para el razonamiento complejo y la revisión de arquitecturas, Claude podría haber detectado la vulnerabilidad lógica al analizar cómo el código manejaba las interrupciones del usuario.
 
 
