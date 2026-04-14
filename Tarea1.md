@@ -18,7 +18,7 @@ Las causas principales fueron:
 
 ## ¿En qué fase del SDLC ocurrió el fallo principal?
 
-El fallo se originó en varias fases, pero fue crítico en:
+El fallo se originó en varias fases:
 
 ### *1. Diseño del Sistema (Fallo técnico)*
 El diseño permitió que el software asumiera el rol completo de seguridad, sin redundancia física.  
