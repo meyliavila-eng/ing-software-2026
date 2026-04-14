@@ -4,14 +4,35 @@ El **Therac-25** fue una máquina de radioterapia controlada por computadora pro
 
 El problema principal fue una **condición de carrera (race condition)** en el software. Si el operador realizaba una secuencia específica de comandos en el teclado muy rápidamente (menos de **8 segundos**), el software activaba el **haz de electrones de alta potencia** sin colocar el **escudo protector** en su lugar.
 
+
+## ¿Cuál fue la causa raíz?
+
+Las causas principales fueron:
+
+- **Reutilización de código** de modelos anteriores (**Therac-6** y **Therac-20**) sin considerar que estos dependían de **bloqueos físicos de seguridad**.
+- Eliminación de mecanismos de seguridad de hardware, confiando completamente en el software.
+- Falta de validación de entradas rápidas del operador.
+- Manejo incorrecto de errores: el sistema mostraba mensajes confusos, haciendo que el operador creyera que era un fallo menor.
+
 ---
 
 ## ¿En qué fase del SDLC ocurrió el fallo principal?
 
-El fallo ocurrió principalmente en las fases de **Diseño** e **Implementación**, pero falló críticamente en la fase de **Pruebas (Testing)**.
+El fallo se originó en varias fases, pero fue crítico en:
 
-**Causa:**  
-El software se basó en código de modelos anteriores (**Therac-6** y **Therac-20**) que tenían hardware de seguridad físico. Los ingenieros eliminaron los bloqueos físicos y confiaron totalmente en el software sin realizar pruebas de estrés sobre la velocidad de entrada del usuario.
+### *1. Diseño del Sistema (Fallo técnico)*
+El diseño permitió que el software asumiera el rol completo de seguridad, sin redundancia física.  
+En sistemas médicos críticos, el diseño debe incluir mecanismos de protección independientes (*hardware + software*).
+
+### *2. Desarrollo (Fallo técnico)*
+Durante la codificación se introdujo una *condición de carrera* debido a mala sincronización en el control de eventos del sistema.
+
+### *3. Pruebas (Falla principal)*
+La falla más grave ocurrió en la fase de *pruebas*, ya que:
+
+- No se realizaron pruebas de estrés con entradas rápidas.
+- No se simularon escenarios reales de operación.
+- No se detectaron errores críticos antes de ponerlo en uso clínico.
 
 ---
 
@@ -31,9 +52,9 @@ Al proporcionarle la arquitectura del sistema, estas IAs son buenas identificand
       ↓
 [Diseño del Sistema]  ←  FALLO TÉCNICO (seguridad mal diseñada)
       ↓
-[Desarrollo / Codificación]  ←  FALLO TÉCNICO (condicion de carrera)
+[Desarrollo ]  ←  FALLO TÉCNICO (condicion de carrera)
       ↓
-[Pruebas / Testing]  ←  FALLA PRINCIPAL (no detectaron el error)
+[Pruebas]  ←  FALLA PRINCIPAL (no detectaron el error)
       ↓
 [Implementación / Despliegue]
       ↓
