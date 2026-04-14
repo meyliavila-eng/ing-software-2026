@@ -38,9 +38,9 @@ La falla más grave ocurrió en la fase de *pruebas*, ya que:
 
 ## ¿Qué herramienta de IA podría haber detectado o prevenido este fallo?
 
-Una herramienta como **Claude** o **GPT-4**  podría haber detectado este tipo de fallo.
+Modelos avanzados como **Claude** o **GPT-4** son capaces de prever este tipo de vulnerabilidades. Al analizar la arquitectura del sistema, estas herramientas destacan por identificar **condiciones de carrera** y fallos de lógica concurrente que suelen pasar desapercibidos en revisiones manuales. 
 
-Al proporcionarle la arquitectura del sistema, estas IAs son buenas identificando **condiciones de carrera** y fallos de lógica concurrente que pueden ser difíciles de notar para un humano. También podría haber recomendado que confiar únicamente en el software para la seguridad representaba un **riesgo crítico**.
+Asimismo, habrían señalado un **riesgo crítico** de diseño: la vulnerabilidad de confiar exclusivamente en el software para la seguridad, omitiendo salvaguardas físicas o redundancias.
 
 ---
 
