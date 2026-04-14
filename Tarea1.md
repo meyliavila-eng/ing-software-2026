@@ -44,7 +44,7 @@ Asimismo, habrían señalado un **riesgo crítico** de diseño: la vulnerabilida
 
 ---
 
-## Diagrama simple del SDLC marcando el punto de fallo
+## Diagrama del SDLC marcando el punto de fallo
 ```text
 [Planificación]
       ↓
